@@ -13,3 +13,4 @@ resource "google_compute_instance" "jenkin-win" {
     network = var.network
   }
 }
+
