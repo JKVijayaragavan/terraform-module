@@ -1,19 +1,15 @@
-resource "google_compute_instance" "jenkin_win" {
-    name = var.name
-    machine_type = var.machine
-    zone = var.zone
-    boot_disk {
-      initialize_params {
-        image = var.image
-      }
+resource "google_compute_instance" "jenkin-win" {
+  name           = var.name
+  machine_type   = var.machine
+  zone           = var.zone
+  tags           = var.tags
+  can_ip_forward = true
+  boot_disk {
+    initialize_params {
+      image = var.image
     }
-    network_interface {
-      network = google_compute_network.vpc_network.name
+  }
+  network_interface {
+    network = var.network
+  }
 }
-}
-
-#Network
-resource "google_compute_network" "vpc_network" {
-  name = "vpcnetwork"
-}
-
