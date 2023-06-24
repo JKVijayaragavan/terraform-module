@@ -1,4 +1,4 @@
 variable  "vpcname" {}
 variable  "sunbetname" {}
-variable  "network" {}
+#variable  "network" {}
 variable  "firewallname" {}

@@ -9,13 +9,13 @@ resource "google_compute_subnetwork" "subnet1" {
   name = var.sunbetname
   ip_cidr_range = "10.0.1.0/24"
   region = "us-west1"
-  network = var.network
+  network = google_compute_network.vpcnetwork.id
   
 }
 
 resource "google_compute_firewall" "firewall1" {
   name = var.firewallname
-  network = var.network
+  network = google_compute_network.vpcnetwork.id
   allow {
     protocol = "icmp"
   }
