@@ -1,0 +1,4 @@
+variable "name" {}
+variable "machine" {}
+variable "zone" {}
+variable "image" {}

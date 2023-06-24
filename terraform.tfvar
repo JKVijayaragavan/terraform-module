@@ -1,4 +1,0 @@
-name = "jenkin_win"
-machine = "f1.micro"
-zone = "us-west1-a"
-image = "windows-cloud/windows-2012-r2"
